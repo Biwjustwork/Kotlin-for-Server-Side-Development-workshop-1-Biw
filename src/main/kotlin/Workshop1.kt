@@ -22,12 +22,10 @@ fun main() {
         // เลือก 'exit' เพื่อออกจากโปรแกรม
         // 🚨
 
-        if (choice == "1"){
-            convertCelsiusToFahrenheit()
-        }else if (choice == "2"){
-            convertKilometersToMiles()
-        }else if (choice == "exit"){
-            break
+        when (choice)  {
+            "1" -> convertCelsiusToFahrenheit()
+            "2" -> convertKilometersToMiles()
+            "exit" -> break
         }
 
 

@@ -1,3 +1,5 @@
+import org.example.Product
+import org.example.celsiusToFahrenheit
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
