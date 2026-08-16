@@ -3,6 +3,15 @@ package org.example
 // 1. กำหนด data class สำหรับเก็บข้อมูลสินค้า
 data class Product(val name: String, val price: Double, val category: String)
 
+fun calculateTotalElectronicsPriceOver500 (products: List<Product>): Double {
+    val totalElecPriceOver500 = products
+        .filter { it.category == "Electronics" }
+        .filter { it.price > 500 }
+        .map { it.price }
+        .sum().toDouble()
+    return totalElecPriceOver500
+}
+
 fun main() {
     // 2. สร้างรายการสินค้าตัวอย่าง (List<Product>)
     // สินค้า name = "Laptop", price = 35000.0, category = "Electronics"
